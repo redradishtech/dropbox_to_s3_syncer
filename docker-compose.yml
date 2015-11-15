@@ -1,0 +1,17 @@
+dropbox:
+#  image: redradishtech/dropbox
+  build: docker-dropbox
+  # Needed for LAN sync:
+  net: host
+  restart: always
+  env_file: .env
+  volumes:
+   - ./dropbox/Dropbox:/dbox/Dropbox
+   - ./dropbox/.dropbox:/dbox/.dropbox
+
+s3syncer:
+  build: docker-dropbox_to_s3_syncer
+  env_file: .env
+  restart: always
+  volumes_from:
+  - dropbox
