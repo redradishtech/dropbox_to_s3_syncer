@@ -19,7 +19,7 @@ On Ubuntu:
 
 To check on the sync status, run:
 
-    docker exec -it coastecdropboxtos3syncer_dropbox_1 su - dropbox -s /bin/bash -c "dropbox status"
+    docker exec -it dropbox su - dropbox -s /bin/bash -c "dropbox status"
 
 Once this returns 'Up to date', your ./dropbox/Dropbox directory should mirror your Dropbox content.
 
