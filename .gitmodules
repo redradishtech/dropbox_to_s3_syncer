@@ -1,6 +1,0 @@
-[submodule "docker-dropbox_to_s3_syncer"]
-	path = docker-dropbox_to_s3_syncer
-	url = https://github.com/redradishtech/docker-dropbox_to_s3_syncer.git
-[submodule "docker-dropbox"]
-	path = docker-dropbox
-	url = https://github.com/redradishtech/docker-dropbox.git
