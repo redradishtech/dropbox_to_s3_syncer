@@ -8,12 +8,17 @@ On Ubuntu:
 
 2. Copy `.env.sample` to `.env`, and customize with the AWS credentials, S3 bucket and other details.
 
-3. Run `docker-compose up dropbox`. You should see repeated messages of the form:
+3. Get the required Docker build files:
+
+	git clone https://github.com/redradishtech/docker-dropbox_to_s3_syncer.git
+	git clone ttps://github.com/redradishtech/docker-dropbox_to_s3_syncer.git
+
+4. Run `docker-compose up dropbox`. You should see repeated messages of the form:
 
     dropbox_1 | This computer isn't linked to any Dropbox account...
     dropbox_1 | Please visit https://www.dropbox.com/cli_link_nonce?nonce=xxxxxxxxxxxxxxxxxxxxxxxxx to link this device.
 
-4. Visit the URL to authorize the Dropbox instance, after which the docker log should report:
+5. Visit the URL to authorize the Dropbox instance, after which the docker log should report:
 
     dropbox_1 | This computer is now linked to Dropbox. Welcome <name>
 
@@ -23,4 +28,4 @@ To check on the sync status, run:
 
 Once this returns 'Up to date', your ./dropbox/Dropbox directory should mirror your Dropbox content.
 
-5. Now run `docker-compose up s3syncer`. If you set the variables correctly in `.env`, 
+6. Now run `docker-compose up s3syncer`. If you set the variables correctly in `.env`, 
