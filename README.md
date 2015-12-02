@@ -10,8 +10,10 @@ On Ubuntu:
 
 3. Get the required Docker build files:
 
+```
 	git clone https://github.com/redradishtech/docker-dropbox_to_s3_syncer.git
 	git clone https://github.com/redradishtech/docker-dropbox.git
+```
 
 4. Run `docker-compose up dropbox`. You should see repeated messages of the form:
 
